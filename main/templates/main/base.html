@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,23 +7,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
 </head>
 
 <body>
 
     <header>
+        <div class="navbar">
+            <div class="logo">
+                logo
+            </div>
 
+            <div class="items">
+                 Catalog Cart Discounts
+            </div>
+
+            <div class="user_panel">
+                Log in
+                Registration
+
+            </div>
+        </div>
     </header>
 
-
-    {% block content %}
-    {% endblock content %}
-
+    {% block content %} {% endblock content %}
 
     <footer>
 
     </footer>
 
+    {% block scripts %} {% endblock scripts %}
 </body>
 
 </html>
